@@ -5,6 +5,7 @@ import testetecnico.com.teste.repository.ContaRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -16,9 +17,9 @@ public class ContaService {
         return contaRepository.save(conta);
     }
 
-    public Conta update(Long id, Conta conta) {
-        // Implementar a lógica de atualização
-    }
+    // public Conta update(Long id, Conta conta) {
+    //     // Implementar a lógica de atualização
+    // }
 
     public Conta findById(Long id) {
         return contaRepository.findById(id).orElse(null);
@@ -34,5 +35,6 @@ public class ContaService {
     
     public Double findTotalPaidByPeriod(LocalDate startDate, LocalDate endDate) {
         // Implementar lógica para obter valor total pago por período
+        return 12312.3123;
     }
 }
